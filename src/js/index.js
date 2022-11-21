@@ -1,6 +1,6 @@
 import '../scss/style.scss';
 
-import _ from 'lodash';
+//import _ from 'lodash';
 
 import { showHelp } from './help';
 import { search } from './search';
@@ -10,13 +10,14 @@ function component() {
   const element = document.createElement('div');
 
   // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack', '!!!'], ' ');
+  //element.innerHTML = _.join(['Hello', 'webpack', '!!!'], ' ');
+  element.innerHTML = 'hallo welt!!!';
   element.classList.add('colorful');
   showHelp();
 
   console.log(search(['hallo', 'welt'], 'hallo'));
-  // console.log(add(4, 9));
-  // console.log(SHA256('hallo welt'));
+  console.log(add(4, 9));
+  console.log(SHA256('hallo welt'));
 
   return element;
 }

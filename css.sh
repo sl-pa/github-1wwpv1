@@ -24,7 +24,7 @@ npm install sass-loader sass --save-dev
 #   ],
 # },
 
-# für file loader:
+# für file loader (deprecated):
 npm install --save-dev file-loader
 
 # module: {
@@ -41,6 +41,21 @@ npm install --save-dev file-loader
 #           },
 #           'sass-loader',
 #         ],
+#       },
+#     ],
+#   },
+
+# neu seit webpack5: asset modules: https://webpack.js.org/guides/asset-modules/
+# brauchte kein npm install
+#  module: {
+#     rules: [
+#       {
+#         test: /\.scss$/i,
+#         type: 'asset/resource',
+#         generator: {
+#           filename: '[name].min.css',
+#         },
+#         use: ['sass-loader'],
 #       },
 #     ],
 #   },

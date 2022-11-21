@@ -13,15 +13,11 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].min.css',
-            },
-          },
-          'sass-loader',
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: '[name].min.css',
+        },
+        use: ['sass-loader'],
       },
     ],
   },
