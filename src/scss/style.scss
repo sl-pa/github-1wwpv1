@@ -1,0 +1,9 @@
+.colorful {
+  background-color: green;
+  color: orange;
+  transition: color 150ms;
+
+  &:hover {
+    color: blue;
+  }
+}
